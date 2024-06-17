@@ -3,7 +3,7 @@ import { StoryblokStory, getStoryblokApi } from "@storyblok/react/rsc";
 const fetchHomePage = async () => {
   const storyblokApi = getStoryblokApi();
   const response = await storyblokApi.getStory(`home`, {
-    version: "draft",
+    version: process.env.NODE_ENV === "development" ? "draft" : "published",
     resolve_relations: "details_list.details",
   });
   return response.data.story;
