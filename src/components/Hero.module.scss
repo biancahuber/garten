@@ -1,0 +1,17 @@
+.component {
+  position: relative;
+  margin-bottom: 75px;
+}
+.imageContainer {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.headline {
+  padding: 100px 50px;
+}

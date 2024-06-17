@@ -1,10 +1,10 @@
+import { ImageUI } from "./ui/Image";
+
 export const Image = (props: any) => {
   return (
     <div>
-      <img src={props.blok.image.filename} alt="" />
+      <ImageUI src={props.blok.image.filename} />
       <p>{props.blok.description}</p>
     </div>
   );
-
-  // return <p>{props.blok} </p>;
 };

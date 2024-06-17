@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../style/base.scss";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import { StoryblokProvider } from "@/components/StoryblokProvider";
 

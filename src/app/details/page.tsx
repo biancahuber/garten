@@ -1,4 +1,5 @@
 import { Teaser } from "@/components/Teaser";
+import { TeaserListUI } from "@/components/ui/TeaserList";
 import { StoryblokStory, getStoryblokApi } from "@storyblok/react/rsc";
 
 const fetchDetailsPage = async () => {
@@ -24,11 +25,12 @@ const DetailsPage = async () => {
 
   return (
     <div>
-      <h1>{story.content.Headline}</h1>
       <StoryblokStory story={story} />
-      {details.map((detail) => (
-        <Teaser story={detail} key={detail.content._uid} />
-      ))}
+      <TeaserListUI>
+        {details.map((detail) => (
+          <Teaser story={detail} key={detail.content._uid} />
+        ))}
+      </TeaserListUI>
     </div>
   );
 };
